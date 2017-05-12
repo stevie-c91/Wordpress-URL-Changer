@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WordPress MySQL Generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+    </head>
+    <body>
+        <div class="container">
+            <h3>Use this to generate a customised SQL script for use when changing the URL in a WordPress database.</h3>
+            <div class="inputs">
+                <input type="text" placeholder="DB Prefix" id="dbPrefix" onKeyPress="updateScript()" onKeyUp="updateScript()"> <br><br>
+                <input type="text" placeholder="Old URL" id="oldUrl" onKeyPress="updateScript()" onKeyUp="updateScript()"> <br><br>
+                <input type="text" placeholder="New URL" id="newUrl" onKeyPress="updateScript()" onKeyUp="updateScript()"> <br><br>
+            </div>
+            <input type="text" placeholder="Generated script" id="script"> <br><br>
+            <button type="button" onclick="copy_to_clipboard('script');">Copy to Clipboard</button>
+            <script type="text/javascript" src="js/scripts.js"></script> <br>
+            <h3 class="success hidden" id="success">SCRIPT COPIED!</h3>
+        </div>
+    </body>
+</html>
